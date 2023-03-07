@@ -71,9 +71,11 @@ function GetJsonList() {
             setSelectedOption(dropdown[selectedOptionValue]);
             getList();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     useEffect(() => {
         getList();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page]);
     window.addEventListener('scroll', function () {
         const {
