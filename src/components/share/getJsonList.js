@@ -17,7 +17,7 @@ function GetJsonList() {
     const [list, setList] = useState([]);
     const [page, setPage] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
-    let selectedOptionValue = localStorage.getItem('selectedOption') || null;
+    let selectedOptionValue = localStorage.getItem('selectedOption') || 0;
     
     let dropdown = [
         {
