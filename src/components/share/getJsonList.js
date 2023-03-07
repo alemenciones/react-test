@@ -97,7 +97,7 @@ function GetJsonList() {
                 onChange={handleChange}
                 getOptionLabel={e => (
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={e.icon}/>
+                    <img src={e.icon} alt={e.text}/>
                     <span style={{ marginLeft: 5 }}>{e.text}</span>
                 </div>
                 )}
@@ -114,7 +114,7 @@ function GetJsonList() {
                             className={`card ${isActive === index ? "card_active" : "card_normal"}`}
                                     onMouseEnter={() => setActive(index)}
                                     onMouseLeave={() => setActive(null)}>
-                                <a className="url" href={item.story_url} target="_blank">
+                                <a className="url" href={item.story_url} target="_blank" rel="noreferrer">
                                     <span className="created_at" >
                                         <AccessTimeIcon fontSize="small" className="timeIcon"></AccessTimeIcon>
                                         <ReactTimeAgo date={Date.parse(item.created_at)} locale="en-US" />

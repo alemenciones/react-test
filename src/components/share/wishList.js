@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Select from 'react-select';
 import ReactTimeAgo from 'react-time-ago';
 import TimeAgo from 'javascript-time-ago';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -45,7 +44,7 @@ function WishList() {
                 className={`card ${isActive === index ? "card_active" : "card_normal"}`}
                   onMouseEnter={() => setActive(index)}
                   onMouseLeave={() => setActive(null)}>
-                    <a className="url" href={item.story_url} target="_blank">
+                    <a className="url" href={item.story_url} target="_blank" rel="noreferrer">
                         <span className="created_at" >
                             <AccessTimeIcon fontSize="small" className="timeIcon"></AccessTimeIcon>
                             <ReactTimeAgo date={Date.parse(item.created_at)} locale="en-US" />
